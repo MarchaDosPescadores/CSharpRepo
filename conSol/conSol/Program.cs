@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ListNetworkComputers;
 using Ini;
-
+using System.Collections;
 
 namespace conSol
 {
@@ -16,6 +17,16 @@ namespace conSol
             ini.IniWriteValue("marcha", "dos", "pescadores");
             String readString = ini.IniReadValue("marcha", "dos");
             System.Console.WriteLine("Hello " + readString);
+
+            ArrayList networkComputers = new ArrayList();
+
+            NetworkBrowser nb = new NetworkBrowser();
+            networkComputers = nb.getNetworkComputers();
+
+            Console.WriteLine( networkComputers[0]);
+
+
+
         }
     }
 }

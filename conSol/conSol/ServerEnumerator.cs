@@ -122,7 +122,6 @@ namespace ListNetworkComputers
             int resHandle = 0;
             int sizeofINFO = Marshal.SizeOf(typeof(_SERVER_INFO_100));
 
-
             try
             {
                 //call the DllImport : NetServerEnum with all its required parameters
